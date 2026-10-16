@@ -4,5 +4,11 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/resumeai/',
+  base: '/ResumeAI/',
+  server: {
+    port: 5173,
+  },
+  optimizeDeps: {
+    include: ['pdfjs-dist/build/pdf'],
+  },
 });
